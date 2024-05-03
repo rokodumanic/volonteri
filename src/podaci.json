@@ -1,18 +1,22 @@
 {
     "aktivnosti": [
         {
-            "naziv":"pomaganje",
+            "naziv":"Pomaganje",
             "datum":"sada",
             "lokacija": "Split",
             "udruga": null,
-            "opis": "Pomazemo jedni drugima."
+            "opis": "Pomazemo jedni drugima.",
+            "id": 1,
+            "volonteri": [{"ime":"Ante", "prezime":"Dobrila"}]
         },
         {
-            "naziv":"volontiraj",
+            "naziv":"Volontiraj",
             "datum":"u podne",
             "lokacija": "Zadar",
-            "udruga": null,
-            "opis": "Volontiraj i zabavi se."
+            "udruga": "Sunce",
+            "opis": "Volontiraj i zabavi se.",
+            "id": 2,
+            "volonteri": []
         }
     ],
     "volonteri": []

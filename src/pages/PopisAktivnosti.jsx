@@ -5,6 +5,7 @@ import AktivnostInfo from '../components/aktivnosti/AktivnostInfo';
 
 function PopisAktivnosti(){
     const data = useContext(AppContext);
+    
     const [isInfoVisible, setInfoVis] = useState(false);
 
     
@@ -25,14 +26,14 @@ function PopisAktivnosti(){
         });
       }
 
-    function handleClick(){
-        
+    function handleClick(aktivnost){
+        data.setKontekst({...data.kontekst , selected: aktivnost.id});
         setInfoVis(true);
     }
 
     function closeEditModal(){
         setInfoVis(false);
-    
+        data.setKontekst({...data.kontekst , selected: null});
       };
 
     return(<>
