@@ -10,10 +10,10 @@ function NavBar() {
         <Container>
           <Navbar.Brand href="#home">Volontiraj</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Pocetna</Nav.Link>
-            <Nav.Link href="#features">Aktivnosti</Nav.Link>
-            <Nav.Link href="#pricing">Volonteri</Nav.Link>
-            <Nav.Link href="#pricing">Udruge</Nav.Link>
+            <Nav.Link onClick={()=>handleClick("pocetna")}>Pocetna</Nav.Link>
+            <Nav.Link onClick={()=>handleClick("aktivnosti")}>Aktivnosti</Nav.Link>
+            <Nav.Link onClick={()=>handleClick("volonteri")}>Volonteri</Nav.Link>
+            <Nav.Link onClick={()=>handleClick("udruge")}>Udruge</Nav.Link>
           </Nav>
           <CustomToggleButton />
         </Container>
