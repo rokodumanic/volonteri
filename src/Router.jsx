@@ -1,7 +1,7 @@
 import Pocetna from './pages/Pocetna';
 import { useContext } from 'react';
 import AppContext from './kontekst';
-
+import PopisAktivnosti from './pages/PopisAktivnosti';
 
 
 function Router(){
@@ -11,9 +11,9 @@ function Router(){
     switch (data.kontekst.stranica) {
         case 'pocetna':
           return <Pocetna />;
-        /* case 'aktivnosti':
-          return <Aktivnosti />;
-        case 'volonteri':
+        case 'aktivnosti':
+          return <PopisAktivnosti />;
+        /* case 'volonteri':
           return <Volonteri />;
         case 'udruge':
           return <Udruge />; */

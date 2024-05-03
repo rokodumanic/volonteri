@@ -1,4 +1,19 @@
 {
-    "aktivnosti": [],
+    "aktivnosti": [
+        {
+            "naziv":"pomaganje",
+            "datum":"sada",
+            "lokacija": "Split",
+            "udruga": null,
+            "opis": "Pomazemo jedni drugima."
+        },
+        {
+            "naziv":"volontiraj",
+            "datum":"u podne",
+            "lokacija": "Zadar",
+            "udruga": null,
+            "opis": "Volontiraj i zabavi se."
+        }
+    ],
     "volonteri": []
 }
