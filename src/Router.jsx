@@ -1,8 +1,14 @@
 import Pocetna from './pages/Pocetna';
+import { useContext } from 'react';
+import AppContext from './kontekst';
+
 
 
 function Router(){
-    switch (value) {
+
+    const data = useContext(AppContext);
+
+    switch (data.kontekst.stranica) {
         case 'pocetna':
           return <Pocetna />;
         /* case 'aktivnosti':

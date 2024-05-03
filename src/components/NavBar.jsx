@@ -1,10 +1,19 @@
+import { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CustomToggleButton from './ToggleBtn';
+import AppContext from '../kontekst';
 
 
 function NavBar() {
+
+  const data = useContext(AppContext);
+
+  function handleClick(action){
+    data.setKontekst({...data.kontekst,  stranica: action});
+  }
+
   return (
       <Navbar bg="light" data-bs-theme="light">
         <Container>

@@ -13,8 +13,8 @@ function App() {
     udruge: []
   });
 
-/*   useEffect(()=>{console.log("Kontekst", kontekst)},[kontekst]);
- */
+   useEffect(()=>{console.log("Kontekst", kontekst)},[kontekst]);
+ 
   return (
     <div>
       <AppContext.Provider value={{kontekst, setKontekst}}>
