@@ -41,12 +41,14 @@ function ModalPrijava(){
     function handlePrijava(){
         let arr = data.kontekst;
         console.log("VOLONTER", volonter);
-      arr.aktivnosti.find(obj => obj.id === data.kontekst.selected).volonteri.push({...volonter, id:nanoid()});
+        if(info.volonteri==undefined){
+          arr.aktivnosti.find(obj => obj.id === data.kontekst.selected).volonteri = [{...volonter, id:nanoid()}];
+        } else if(info.volonteri != undefined){
+          arr.aktivnosti.find(obj => obj.id === data.kontekst.selected).volonteri.push({...volonter, id:nanoid()});
+        } else return;
       console.log("DATA Before:", data.kontekst);
       data.setKontekst({...arr});
       console.log("DATA After:", data.kontekst);
-      
-      
     }
 
     return(

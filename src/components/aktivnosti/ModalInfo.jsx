@@ -9,7 +9,7 @@ function ModalInfo(){
         <>
         <p><b>Vrijeme odrzavanja:</b> {info.datum}</p>
         <p><b>Grad:</b> {info.lokacija}</p>
-        {info.udruga != null ? 
+        {info.udruga != "" ? 
             <p><b>Organizator:</b> {info.udruga}</p> : 
             <p>Organizator <b>nije</b> volonterska udruga</p>
         }

@@ -1,12 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import ModalInfo from './ModalInfo';
 import { useContext } from 'react';
 import AppContext from '../../kontekst';
-import ModalPrijava from './ModalPrijava';
-import AktivnostVolonteri from './AktivnostVolonteri';
+import AddForm from './AddForm';
 
-function AktivnostInfo({onClose}){
+function AddAktivnost({onClose}){
     const data = useContext(AppContext);
     const info = data.kontekst.aktivnosti.find(obj => obj.id === data.kontekst.selected);
 
@@ -15,13 +13,11 @@ function AktivnostInfo({onClose}){
     
         <Modal  show={true} onHide={onClose}>
           <Modal.Header closeButton>
-            <Modal.Title>{info.naziv}</Modal.Title>
+            <Modal.Title>Stvori Aktivnost</Modal.Title>
           </Modal.Header>
   
           <Modal.Body>
-              <ModalInfo  />
-              <ModalPrijava />
-              {info.volonteri != undefined && <AktivnostVolonteri />}
+              <AddForm />
           </Modal.Body>
   
           <Modal.Footer>
@@ -31,4 +27,4 @@ function AktivnostInfo({onClose}){
     );
 }
 
-export default AktivnostInfo;
+export default AddAktivnost;

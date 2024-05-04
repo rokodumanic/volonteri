@@ -4,7 +4,7 @@
       "naziv": "Pomaganje",
       "datum": "sada",
       "lokacija": "Split",
-      "udruga": null,
+      "udruga": "",
       "opis": "Pomazemo jedni drugima.",
       "id": "1",
       "volonteri": [
@@ -31,6 +31,36 @@
           "ime": "Marko",
           "prezime": "Magdalen",
           "id": "vKzSSPMnI2wtF8HkK7hiE"
+        }
+      ]
+    },
+    {
+      "id": "u4hPHs_aoCGKycmJ1H8JP",
+      "naziv": "proba",
+      "datum": "nekad",
+      "lokacija": "Split",
+      "udruga": "",
+      "opis": "svmkvm ssvl vm",
+      "volonteri": [
+        {
+          "ime": "Roko",
+          "prezime": "Dumanic",
+          "id": "zpwLE8jzFGBC2SjYSp4QQ"
+        },
+        {
+          "ime": "Roko",
+          "prezime": "Dumanic",
+          "id": "WrYXo-maGhRNSwJvqbmtu"
+        },
+        {
+          "ime": "Roko",
+          "prezime": "Dumanic",
+          "id": "ixjmuwMU1_zzwN1CjP-5C"
+        },
+        {
+          "ime": "Roko",
+          "prezime": "dadas",
+          "id": "mMsGOqKqTn3fKphfOkAdc"
         }
       ]
     }

@@ -2,11 +2,14 @@ import { useContext, useEffect, useState } from 'react';
 import AppContext from '../kontekst';
 import axios from 'axios';
 import AktivnostInfo from '../components/aktivnosti/AktivnostInfo';
+import AddAktivnost from '../components/aktivnosti/AddAktivnost';
+import { Button } from 'react-bootstrap';
 
 function PopisAktivnosti(){
     const data = useContext(AppContext);
     
     const [isInfoVisible, setInfoVis] = useState(false);
+    const [isAddVis, setAddVis] = useState(false);
 
     
     useEffect(()=>{
@@ -36,11 +39,25 @@ function PopisAktivnosti(){
         data.setKontekst({...data.kontekst , selected: null});
       };
 
+      function handleAdd(){
+/*         data.setKontekst({...data.kontekst , selected: aktivnost.id});
+ */        setAddVis(true);
+    }
+
+    function closeAddModal(){
+        setAddVis(false);
+/*         data.setKontekst({...data.kontekst , selected: null});
+ */      };
+
     return(<>
     {isInfoVisible=== true ? 
-          
           <AktivnostInfo 
             onClose={()=>closeEditModal()}
+          />
+         : null}
+    {isAddVis=== true ? 
+          <AddAktivnost 
+            onClose={()=>closeAddModal()}
           />
          : null}
     {data.kontekst.aktivnosti.map((aktivnost)=>( 
@@ -49,6 +66,7 @@ function PopisAktivnosti(){
             <p>Datum: {aktivnost.datum}</p>
             <p>Grad: {aktivnost.lokacija}</p>
         </div>))}
+        <Button onClick={handleAdd}>+</Button>
         </>)
     };
     
