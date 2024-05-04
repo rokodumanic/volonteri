@@ -1,16 +1,36 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AppContext from "../../kontekst";
 import { Button } from "react-bootstrap";
 import { nanoid } from 'nanoid'
+import axios from "axios";
 
 function ModalPrijava(){
     const data = useContext(AppContext);
-    let info = data.kontekst.aktivnosti.find(obj => obj.id === data.kontekst.selected)
+    let info = {...data.kontekst.aktivnosti.find(obj => obj.id === data.kontekst.selected)}
     const [volonter,setVolonter] = useState({
       ime:"",
-      prezime:"",
-      id:""
+      prezime:""
     })
+    
+
+    useEffect(()=>{
+      if(volonter.id != ""){
+        prijaviVolontera()
+      }
+    },[volonter.id])
+
+    function structureData(res){
+      console.log("structureData", info, res, volonter);
+    }
+
+    async function prijaviVolontera(){
+      if(volonter.id != ""){
+        await axios.get(`http://localhost:3001/aktivnosti/${info.id}`)
+          .then((res)=>structureData(res))
+          .then(()=>{ return axios.patch(`http://localhost:3001/aktivnosti/${info.id}`, {...info})})
+        .then(rez => console.log("REZ",rez)); 
+      } else{ return ;}
+    }
 
     function handleInputChange(e){
         const { name, value } = e.target;
@@ -19,12 +39,14 @@ function ModalPrijava(){
      
 
     function handlePrijava(){
-      setVolonter({...volonter, id: info.id+"-"+nanoid()})
-      let arr = data.kontekst;
-      arr.aktivnosti.find(obj => obj.id === data.kontekst.selected).volonteri.push({volonter});
+        let arr = data.kontekst;
+        console.log("VOLONTER", volonter);
+      arr.aktivnosti.find(obj => obj.id === data.kontekst.selected).volonteri.push({...volonter, id:nanoid()});
       console.log("DATA Before:", data.kontekst);
       data.setKontekst({...arr});
       console.log("DATA After:", data.kontekst);
+      
+      
     }
 
     return(
@@ -35,7 +57,7 @@ function ModalPrijava(){
             <input
                 type='text'
                 name='ime'
-                value=""
+                value={volonter.ime}
                 onChange={(e)=>handleInputChange(e)}
                 className="addInput"
                 required
@@ -46,7 +68,7 @@ function ModalPrijava(){
             <input
                 type='text'
                 name='prezime'
-                value=""
+                value={volonter.prezime}
                 onChange={(e)=>handleInputChange(e)}
                 className="addInput"
             />

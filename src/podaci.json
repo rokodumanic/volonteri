@@ -1,23 +1,39 @@
 {
-    "aktivnosti": [
+  "aktivnosti": [
+    {
+      "naziv": "Pomaganje",
+      "datum": "sada",
+      "lokacija": "Split",
+      "udruga": null,
+      "opis": "Pomazemo jedni drugima.",
+      "id": "1",
+      "volonteri": [
         {
-            "naziv":"Pomaganje",
-            "datum":"sada",
-            "lokacija": "Split",
-            "udruga": null,
-            "opis": "Pomazemo jedni drugima.",
-            "id": 1,
-            "volonteri": [{"ime":"Ante", "prezime":"Dobrila"}]
+          "ime": "Ante",
+          "prezime": "Dobrila"
         },
         {
-            "naziv":"Volontiraj",
-            "datum":"u podne",
-            "lokacija": "Zadar",
-            "udruga": "Sunce",
-            "opis": "Volontiraj i zabavi se.",
-            "id": 2,
-            "volonteri": []
+          "ime": "Roko",
+          "prezime": "Dumanic",
+          "id": "RBJUoz_NvHpr7o3rc2elw"
         }
-    ],
-    "volonteri": []
+      ]
+    },
+    {
+      "naziv": "Volontiraj",
+      "datum": "u podne",
+      "lokacija": "Zadar",
+      "udruga": "Sunce",
+      "opis": "Volontiraj i zabavi se.",
+      "id": "2",
+      "volonteri": [
+        {
+          "ime": "Marko",
+          "prezime": "Magdalen",
+          "id": "vKzSSPMnI2wtF8HkK7hiE"
+        }
+      ]
+    }
+  ],
+  "volonteri": []
 }
