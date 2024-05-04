@@ -40,14 +40,12 @@ function PopisAktivnosti(){
       };
 
       function handleAdd(){
-/*         data.setKontekst({...data.kontekst , selected: aktivnost.id});
- */        setAddVis(true);
+        setAddVis(true);
     }
 
     function closeAddModal(){
         setAddVis(false);
-/*         data.setKontekst({...data.kontekst , selected: null});
- */      };
+      };
 
     return(<>
     {isInfoVisible=== true ? 
