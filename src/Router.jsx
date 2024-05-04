@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import AppContext from './kontekst';
 import PopisAktivnosti from './pages/PopisAktivnosti';
 import PopisVolontera from './pages/PopisVolontera';
+import PopisUdruga from './pages/PopisUdruga';
 
 
 function Router(){
@@ -16,8 +17,8 @@ function Router(){
           return <PopisAktivnosti />;
         case 'volonteri':
           return <PopisVolontera />;
-        /* case 'udruge':
-          return <Udruge />; */
+        case 'udruge':
+          return <PopisUdruga />;
         default:
           return <Pocetna/>;
       }

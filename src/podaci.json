@@ -81,5 +81,12 @@
       "ime": "Roko",
       "kontakt": "vwsvdw"
     }
-  ]
+  ],
+  "udruge":[
+    {
+      "naziv":"Sunce",
+      "adresa":"Bihacka 4",
+      "grad": "Split"
+  }],
+  "zahtjevi":[]
 }
