@@ -20,8 +20,7 @@ function PopisAktivnosti(){
           await axios.get('http://localhost:3001/aktivnosti')
         .then(response => {
           console.log("getAktivnosti",response.data);
-          return response.data;
-        })
+          return response.data;})
         .then((res)=>{data.setKontekst( {...data.kontekst , aktivnosti: res});
         console.log("AKT:", res, "\n", "data:", data.kontekst.aktivnostic);})
         .catch(error => {

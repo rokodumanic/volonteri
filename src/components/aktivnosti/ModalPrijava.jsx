@@ -28,7 +28,8 @@ function ModalPrijava(){
         await axios.get(`http://localhost:3001/aktivnosti/${info.id}`)
           .then((res)=>structureData(res))
           .then(()=>{ return axios.patch(`http://localhost:3001/aktivnosti/${info.id}`, {...info})})
-        .then(rez => console.log("REZ",rez)); 
+        .then(rez => console.log("REZ",rez))
+        .catch(err => console.log(err.message)); 
       } else{ return ;}
     }
 

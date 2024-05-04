@@ -30,7 +30,8 @@ function GalerijaVolontera(){
                         <p>{eachVol.ime}</p>
                         <p>Grad: {eachVol.lokacija}</p>
                         <p>Kontakt: {eachVol.kontakt}</p>
-                        <span>Kategorije volontiranja: </span> 
+                        {eachVol.aktivnosti != undefined ? <span>Kategorije volontiranja: </span> : 
+                            <span>Nema preference za tip rada</span>} 
                         {eachVol.aktivnosti != undefined && eachVol.aktivnosti.map((eachKat, index)=>(
                             index === 0 ? <span>{eachKat}</span>: <span>, {eachKat}</span>
                             

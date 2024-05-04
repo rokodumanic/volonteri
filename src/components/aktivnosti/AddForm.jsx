@@ -16,7 +16,9 @@ function AddForm(){
 
     async function addAkt(idAkt){
           await  axios.post(`http://localhost:3001/aktivnosti/`, {...aktivnost, id: idAkt})
-          .then(rez => console.log("REZ",rez)); 
+          .then(rez => console.log("REZ",rez))
+          .catch(err => console.log(err.message));
+
       }
 
     function handleInputChange(e){

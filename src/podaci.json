@@ -70,7 +70,16 @@
       "ime": "Marko Boljat",
       "lokacija": "Solin",
       "kontakt": "099385969",
-      "aktivnosti": ["Edukacija", "Prijevoz"]
+      "aktivnosti": [
+        "Edukacija",
+        "Prijevoz"
+      ],
+      "id": "7306"
+    },
+    {
+      "id": "24ea",
+      "ime": "Roko",
+      "kontakt": "vwsvdw"
     }
   ]
 }
