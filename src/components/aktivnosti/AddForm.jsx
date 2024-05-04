@@ -88,8 +88,9 @@ function AddForm(){
                 required
             />
           </label>
-          <Button onClick={handleClick}>Stvori</Button>
         </div>
+        <Button onClick={handleClick}>Stvori</Button>
+
       </form>
     );
 }

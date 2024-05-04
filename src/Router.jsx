@@ -2,6 +2,7 @@ import Pocetna from './pages/Pocetna';
 import { useContext } from 'react';
 import AppContext from './kontekst';
 import PopisAktivnosti from './pages/PopisAktivnosti';
+import PopisVolontera from './pages/PopisVolontera';
 
 
 function Router(){
@@ -13,9 +14,9 @@ function Router(){
           return <Pocetna />;
         case 'aktivnosti':
           return <PopisAktivnosti />;
-        /* case 'volonteri':
-          return <Volonteri />;
-        case 'udruge':
+        case 'volonteri':
+          return <PopisVolontera />;
+        /* case 'udruge':
           return <Udruge />; */
         default:
           return <Pocetna/>;

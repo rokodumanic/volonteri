@@ -4,7 +4,7 @@
       "naziv": "Pomaganje",
       "datum": "sada",
       "lokacija": "Split",
-      "udruga": "",
+      "udruga": null,
       "opis": "Pomazemo jedni drugima.",
       "id": "1",
       "volonteri": [
@@ -65,5 +65,12 @@
       ]
     }
   ],
-  "volonteri": []
+  "volonteri": [
+    {
+      "ime": "Marko Boljat",
+      "lokacija": "Solin",
+      "kontakt": "099385969",
+      "aktivnosti": ["Edukacija", "Prijevoz"]
+    }
+  ]
 }
