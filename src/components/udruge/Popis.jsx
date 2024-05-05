@@ -33,14 +33,16 @@ function Popis() {
   }
 
   return (
-    <div>
+    <div >
       {kontekst.udruge.length > 0 ? (
         kontekst.udruge.map((eachUdruga) => (
-          <div key={eachUdruga.id} style={styles.card}>
+          <div className="cardUdrugaContainer">
+          <div className='cardUdruga' key={eachUdruga.id}>
             <h3>{eachUdruga.naziv}</h3>
             <p>Grad: {eachUdruga.grad}</p>
             <p>Adresa: {eachUdruga.adresa}</p>
-            {kontekst.uloga === "administrator" && <Button onClick={()=>handleBrisanje(eachUdruga)}>Izbrisi</Button>}
+            </div>
+            {kontekst.uloga === "administrator" && <Button variant="danger" onClick={()=>handleBrisanje(eachUdruga)}>Izbrisi</Button>}
           </div>
         ))
       ) : (
@@ -49,17 +51,5 @@ function Popis() {
     </div>
   );
 }
-
-const styles = {
-  card: {
-    backgroundColor: "#ffffff",
-    borderRadius: "8px",
-    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-    padding: "20px",
-    margin: "10px",
-    width: "100%",
-    maxWidth: "400px",
-  },
-};
 
 export default Popis;

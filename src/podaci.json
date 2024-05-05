@@ -99,6 +99,25 @@
       ]
     }
   ],
-  "udruge": [],
+  "udruge": [
+    {
+      "id": "q5JmiIMO7mMhIhXSz9sg_",
+      "naziv": "vsd VS ",
+      "adresa": "dV  dxA ",
+      "grad": "Rijeka"
+    },
+    {
+      "id": "CsFwreE8TXFF2xyjxZkZ1",
+      "naziv": "kk",
+      "adresa": "d",
+      "grad": "Karlovac"
+    },
+    {
+      "id": "63oRZ4k3WzoSnx0jvE3Me",
+      "naziv": "vdyVd cy",
+      "adresa": " dv vx ",
+      "grad": "Vukovar"
+    }
+  ],
   "zahtjevi": []
 }
