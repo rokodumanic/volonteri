@@ -30,7 +30,6 @@ import { Loader } from 'google-maps';
 
     const loader = new Loader('AIzaSyCT46aSAg3SdCICgrKAnW_3Ct-jsxLMcgg', options);
 
-    // Create a new Loader instance with the options
     loader.load().then(function (google) {
         const map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: obj.lat, lng: obj.lng},
@@ -39,7 +38,7 @@ import { Loader } from 'google-maps';
     });
 
     return(
-        <div id="map" style={{ width: '100%', height: '400px' }}></div>
+        <div id="map" className="map" style={{ width: '100px', height: '100px' }}></div>
     );
 }
 

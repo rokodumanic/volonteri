@@ -53,10 +53,11 @@ function ModalPrijava(){
     }
 
     return(
-      <form onSubmit={()=>console.log("JAAAAAAAYYYYYY")}>
+      <form className="prijavaAkt">
         <div>
-          <label>
-            Ime:
+          <label className="prijavaAktLabel">
+            Ime:          </label>
+
             <input
                 type='text'
                 name='ime'
@@ -65,9 +66,8 @@ function ModalPrijava(){
                 className="addInput"
                 required
             />
-          </label>
-          <label>
-            Prezime:
+          <label className="prijavaAktLabel">
+            Prezime:</label>
             <input
                 type='text'
                 name='prezime'
@@ -75,9 +75,11 @@ function ModalPrijava(){
                 onChange={(e)=>handleInputChange(e)}
                 className="addInput"
             />
-          </label>
-          <Button onClick={handlePrijava}>Prijavi se</Button>
-        </div>
+          
+          </div>
+          <div className="prijavaAktButtonContainer">
+          <Button variant="dark" onClick={handlePrijava}>Prijavi se</Button>
+          </div>
       </form>
     );
 }

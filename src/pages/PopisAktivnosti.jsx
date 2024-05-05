@@ -53,7 +53,7 @@ function PopisAktivnosti(){
         setAddVis(false);
       };
 
-    return(<>
+    return(<div className='popAktContainer'>
     {isInfoVisible=== true ? 
           <AktivnostInfo 
             onClose={()=>closeEditModal()}
@@ -65,29 +65,22 @@ function PopisAktivnosti(){
           />
          : null}
     {data.kontekst.aktivnosti.map((aktivnost)=>( 
-        <div style={styles.card}>
-            <div onClick={()=>handleClick(aktivnost)}>
+        <div className='card'>
+            <div className="aktCardInfo" onClick={()=>handleClick(aktivnost)}>
+            <div>
             <h2>{aktivnost.naziv}</h2>
-            <p>Datum: {aktivnost.datum}</p>
-            <p>Grad: {aktivnost.lokacija}</p>
+            <p className='infoAkt'>Datum: {aktivnost.datum}</p>
+            <p className='infoAkt'>Grad: {aktivnost.lokacija}</p>
+            </div>
+            <p className="opisAkt">Opis: {aktivnost.opis}</p>
             </div>
             {data.kontekst.uloga==="administrator" && 
-              <Button onClick={()=>handleBrisanje(aktivnost)}>Izbrisi aktivnost</Button>}
+              <Button className='izbrisiAkt' variant='danger' onClick={()=>handleBrisanje(aktivnost)}>Izbrisi aktivnost</Button>}
         </div>))}
-        <Button onClick={handleAdd}>+</Button>
-        </>)
+        <Button className='addSticky' variant='dark' onClick={handleAdd}>Stvori Aktivnost</Button>
+        </div>)
     };
     
-    const styles = {
-      card: {
-        backgroundColor: '#ffffff',
-        borderRadius: '8px',
-        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-        padding: '20px',
-        margin: '10px',
-        width: '100%',
-        maxWidth: '400px',
-      }
-} 
+
 
 export default PopisAktivnosti;

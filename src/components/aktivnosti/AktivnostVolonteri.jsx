@@ -36,7 +36,7 @@ function AktivnostVolonteri(){
         <div>
             <ol>
                 {info.volonteri != undefined && info.volonteri.map((vol, index) => (
-                  <div key={vol.id}>
+                  <div key={vol.id} className="aktVol">
                     <li key={vol.ime}>{vol.ime} {vol.prezime}</li>
                     { data.kontekst.uloga==="administrator" && 
                         <Button onClick={()=>handleBrisanjeVolontera(info, vol)}>Izbrisi</Button>}

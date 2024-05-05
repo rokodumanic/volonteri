@@ -1,3 +1,114 @@
+.aktCardInfo{
+  display: flex;
+  flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+.addSticky{
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+}
+
+.aktModalBody{
+  display: flex;
+  justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.aktVol{
+  display: flex;
+  margin: 0.2rem auto;
+}
+
+.card{
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0.9rem 0;
+  width: 80%;
+  background-color: #30629798;
+}
+
+.homeAutor{
+  width: 75%;
+  margin: 2.1rem auto;
+}
+
+.homeKontakt{
+  text-align: start;
+}
+
+.homeOpis, .homeKontakt{
+  width: 75%;
+  margin: 0.1rem auto;
+}
+
+.homeOpisContainer, .homeKontaktContainer{
+  background-color: #30629798;
+  padding: 2rem 0;
+}
+
+.infoAkt{
+  margin: 0.4rem;
+}
+
+.izbrisiAkt{
+  width: fit-content;
+  align-self: flex-end;
+  margin-right: 1rem;
+}
+
+
+
+.modalInfo{
+  margin-top: 0;
+}
+
+.opisAkt{
+  margin: 2rem auto;
+}
+
+.popAktContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center
+}
+
+.prijavaAkt{
+  display: flex;
+  flex-direction: column;
+}
+
+.prijavaAkt div{
+  display: flex;
+  flex-direction: column;
+}
+
+.prijavaAktButtonContainer{
+  margin-top: 0.5rem; 
+  align-self: flex-start;
+}
+
+.prijavaAktlabel{
+align-self: flex-start;
+margin-bottom: 0.3rem;
+}
+
+.prijavaAktlabel input{
+  margin-bottom: 0.65rem;
+}
+
+.prijavaAktlabel input{
+  margin: auto 1rem;
+  width: 45%;
+}
+
 .toggle-button {
     position: relative;
   }
@@ -14,7 +125,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #007bff;
+    background-color: #30629798;
     border-radius: 15px;
     z-index: 1;
     transition: all 0.3s;
@@ -27,4 +138,5 @@
   .toggle-button.active .toggle-bg {
     background-color: #28a745;
   }
+  
   

@@ -15,7 +15,7 @@ function NavBar() {
   }
 
   return (
-      <Navbar bg="light" data-bs-theme="light">
+      <Navbar sticky="top" bg="light" data-bs-theme="light">
         <Container>
           <Navbar.Brand href="#home">Volontiraj</Navbar.Brand>
           <Nav className="me-auto">
