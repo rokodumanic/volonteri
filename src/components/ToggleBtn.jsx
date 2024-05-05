@@ -5,9 +5,6 @@ import AppContext from '../kontekst';
 const CustomToggleButton = () => {
   const value = useContext(AppContext);
 
-  console.log("EEEE", value, value.kontekst);
-
-
   const handleChange = (e) => {
     console.log("EEEE", e, value);
     if(value.kontekst.uloga==="korisnik"){
@@ -21,8 +18,7 @@ const CustomToggleButton = () => {
       <ToggleButton
         type="checkbox"
         variant="primary"
-        checked={value=="korisnik"?1:0}
-        value="korisnik"
+        value={value.kontekst.uloga}
         onClick={(e) => handleChange(e)}
       >
         {value.kontekst.uloga}

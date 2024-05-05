@@ -20,21 +20,6 @@
       ]
     },
     {
-      "naziv": "Volontiraj",
-      "datum": "u podne",
-      "lokacija": "Zadar",
-      "udruga": "Sunce",
-      "opis": "Volontiraj i zabavi se.",
-      "id": "2",
-      "volonteri": [
-        {
-          "ime": "Marko",
-          "prezime": "Magdalen",
-          "id": "vKzSSPMnI2wtF8HkK7hiE"
-        }
-      ]
-    },
-    {
       "id": "u4hPHs_aoCGKycmJ1H8JP",
       "naziv": "proba",
       "datum": "nekad",
@@ -67,26 +52,36 @@
   ],
   "volonteri": [
     {
-      "ime": "Marko Boljat",
-      "lokacija": "Solin",
-      "kontakt": "099385969",
-      "aktivnosti": [
-        "Edukacija",
-        "Prijevoz"
-      ],
-      "id": "7306"
-    },
-    {
-      "id": "24ea",
+      "id": "58b9",
       "ime": "Roko",
-      "kontakt": "vwsvdw"
+      "kontakt": "Dumanic",
+      "grad": "",
+      "aktivnosti": [
+        "Prijevoz",
+        "Ekologija",
+        "Edukacija"
+      ]
     }
   ],
-  "udruge":[
+  "udruge": [
     {
-      "naziv":"Sunce",
-      "adresa":"Bihacka 4",
+      "id": "1",
+      "naziv": "Sunce",
+      "adresa": "Bihacka 4",
       "grad": "Split"
-  }],
-  "zahtjevi":[]
+    },
+    {
+      "id": "2",
+      "naziv": "Marjan",
+      "adresa": "Mosorska 3",
+      "grad": "Split"
+    },
+    {
+      "id": "IbScihnM2o4Pui7pZCLRq",
+      "naziv": "Marjan",
+      "adresa": "Mosorska 3",
+      "grad": "Split"
+    }
+  ],
+  "zahtjevi": []
 }

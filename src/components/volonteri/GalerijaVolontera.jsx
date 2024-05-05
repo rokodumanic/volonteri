@@ -28,7 +28,7 @@ function GalerijaVolontera(){
                 data.kontekst.volonteri.map((eachVol)=>(
                     <div style={styles.card}>
                         <p>{eachVol.ime}</p>
-                        <p>Grad: {eachVol.lokacija}</p>
+                        <p>Grad: {eachVol.grad}</p>
                         <p>Kontakt: {eachVol.kontakt}</p>
                         {eachVol.aktivnosti != undefined ? <span>Kategorije volontiranja: </span> : 
                             <span>Nema preference za tip rada</span>} 

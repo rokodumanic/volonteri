@@ -12,7 +12,7 @@ function AddVolonter({onClose}){
           </Modal.Header>
 
           <Modal.Body>
-              <VolonterForm />
+              <VolonterForm onClose={onClose} />
           </Modal.Body>
   
         </Modal>

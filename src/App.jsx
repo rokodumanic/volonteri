@@ -10,10 +10,10 @@ function App() {
     stranica: "pocetna",
     aktivnosti: [],
     volonteri: [], 
-    udruge: []
+    udruge: [],
+    zahtjevi: []
   });
 
-   useEffect(()=>{console.log("Kontekst", kontekst)},[kontekst]);
  
   return (
     <div>
