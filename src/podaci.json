@@ -52,36 +52,22 @@
   ],
   "volonteri": [
     {
-      "id": "58b9",
-      "ime": "Roko",
-      "kontakt": "Dumanic",
-      "grad": "",
+      "id": "d656",
+      "ime": "Mario",
+      "kontakt": "vwsvdw",
+      "grad": "Karlovac",
+      "aktivnosti": []
+    },
+    {
+      "id": "df3d",
+      "ime": "Marko",
+      "kontakt": "vwsvdw",
+      "grad": "Pula",
       "aktivnosti": [
-        "Prijevoz",
-        "Ekologija",
-        "Edukacija"
+        "Razno"
       ]
     }
   ],
-  "udruge": [
-    {
-      "id": "1",
-      "naziv": "Sunce",
-      "adresa": "Bihacka 4",
-      "grad": "Split"
-    },
-    {
-      "id": "6YoZoSOfWWxfQZOCBBjC0",
-      "naziv": "kk",
-      "adresa": "gcuhjv",
-      "grad": "Rijeka"
-    },
-    {
-      "id": "Pl5MxrZ4KBHCYHIRxy_0U",
-      "naziv": "kk",
-      "adresa": "okk",
-      "grad": "Rijeka"
-    }
-  ],
+  "udruge": [],
   "zahtjevi": []
 }

@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import AppContext from "../../kontekst";
 import axios from "axios";
+import { Button } from "react-bootstrap";
 
 function Popis() {
   const {kontekst, setKontekst} = useContext(AppContext);
@@ -15,8 +16,19 @@ function Popis() {
     await axios
       .get("http://localhost:3001/udruge")
       .then((res) => {
+        console.log("UsaJEEE")
         setKontekst({ ...kontekst, udruge: res.data });
       })
+      .catch((err) => console.log("Error:", err));
+  }
+
+  async function handleBrisanje(obj) {
+    await axios
+      .delete(`http://localhost:3001/udruge/${obj.id}`)
+      .then((res) => {
+        console.log("Res brisanje:", res.data);
+      })
+      .then(async() => await getUdruge())
       .catch((err) => console.log("Error:", err));
   }
 
@@ -28,6 +40,7 @@ function Popis() {
             <h3>{eachUdruga.naziv}</h3>
             <p>Grad: {eachUdruga.grad}</p>
             <p>Adresa: {eachUdruga.adresa}</p>
+            {kontekst.uloga === "administrator" && <Button onClick={()=>handleBrisanje(eachUdruga)}>Izbrisi</Button>}
           </div>
         ))
       ) : (

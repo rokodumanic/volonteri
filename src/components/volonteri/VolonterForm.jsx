@@ -36,30 +36,16 @@ function VolonterForm({ onClose }) {
     if (!isButtonDisabled) {
       await axios
         .post(`http://localhost:3001/volonteri/`, { ...volonter })
-        .then(() => {
-          console.log(volonter);
-          onClose();
+        .then(async() => await axios.get("http://localhost:3001/volonteri"))
+        .then((res) => {
+          console.log("AAAAAAAAAAAAAAA",volonter);
+          data.setKontekst({ ...data.kontekst, volonteri: res.data, fresh:false });
         })
+        .then(()=>onClose())
         .catch((err) => console.log(err.message));
     }
     console.log("handlePrijava");
   }
-
-  const handleOptionChange = (e) => {
-    const value = e.target.value;
-    let updatedSelectedOptions = [...volonter.aktivnosti];
-
-    if (e.target.checked) {
-      updatedSelectedOptions.push(value);
-    } else {
-      updatedSelectedOptions = updatedSelectedOptions.filter(
-        (option) => option !== value
-      );
-    }
-    console.log("updatedSelectedOptions", updatedSelectedOptions);
-
-    setVolonter({ ...volonter, aktivnosti: updatedSelectedOptions });
-  };
 
   function handleCheckbox(e) {
     const value = e.target.value;

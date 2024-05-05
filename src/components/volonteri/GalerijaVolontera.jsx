@@ -6,27 +6,26 @@ function GalerijaVolontera(){
     const data = useContext(AppContext);
 
         useEffect(()=>{
-            getVolonteri()
-        },[])
+            if(!data.kontekst.fresh) {getVolonteri()}
+        },[data.kontekst.fresh])
     
-        async function getVolonteri(){      
+        async function getVolonteri(){ 
+            data.setKontekst({...data.kontekst, fresh:true})
+     
               await axios.get('http://localhost:3001/volonteri')
-            .then(response => {
-              console.log("getAktivnosti",response.data);
-              return response.data;
-            })
-            .then((res)=>{data.setKontekst( {...data.kontekst , volonteri: res});
-            console.log("AKT:", res, "\n", "data:", data.kontekst.volonteri);})
+            .then(res => {
+              console.log("getAktivnosti",res.data);
+              data.setKontekst( {...data.kontekst , volonteri: [...res.data]})})
             .catch(error => {
               console.error('There was a problem with the GET request:', error);
             });
           }
 
     return(
-        <div>
+        <div >
             {data.kontekst.volonteri != undefined &&
                 data.kontekst.volonteri.map((eachVol)=>(
-                    <div style={styles.card}>
+                    <div key={eachVol.id} style={styles.card}>
                         <p>{eachVol.ime}</p>
                         <p>Grad: {eachVol.grad}</p>
                         <p>Kontakt: {eachVol.kontakt}</p>
