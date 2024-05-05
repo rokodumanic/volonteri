@@ -17,7 +17,7 @@ const CustomToggleButton = () => {
     <ButtonGroup toggle className="mb-2">
       <ToggleButton
         type="checkbox"
-        variant="primary"
+        variant="dark"
         value={value.kontekst.uloga}
         onClick={(e) => handleChange(e)}
       >

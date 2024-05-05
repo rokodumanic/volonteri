@@ -41,12 +41,13 @@ function Popis() {
             <h3>{eachUdruga.naziv}</h3>
             <p>Grad: {eachUdruga.grad}</p>
             <p>Adresa: {eachUdruga.adresa}</p>
+            {kontekst.uloga === "administrator" && <Button className="cardUdrugaBtn" variant="danger" onClick={()=>handleBrisanje(eachUdruga)}>Izbrisi</Button>}
+
             </div>
-            {kontekst.uloga === "administrator" && <Button variant="danger" onClick={()=>handleBrisanje(eachUdruga)}>Izbrisi</Button>}
           </div>
         ))
       ) : (
-        <h4>Trenutno nema nijedne udruge za volontere</h4>
+        <h3>Trenutno nema nijedne udruge za volontere</h3>
       )}
     </div>
   );

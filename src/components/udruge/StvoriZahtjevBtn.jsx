@@ -16,7 +16,7 @@ function StvoriZahtjevBtn(){
 
     return(
         <div>
-        <Button onClick={()=>handleClick()}>Prijavi udrugu</Button>
+        <Button className='addSticky' variant="dark" onClick={()=>handleClick()}>Prijavi udrugu</Button>
          {isClicked && <StvoriZahtjev onClose={handleClose}/>}
         </div>
     );

@@ -5,7 +5,7 @@ function PopisVolontera(){
 
 
     return(
-        <div>
+        <div className="popisVol">
             <Filteri />
             <GalerijaVolontera />
         </div>

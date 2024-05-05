@@ -33,22 +33,25 @@ function GalerijaVolontera(){
           }
 
     return(
-        <div >
+        <div className="galerijaVol">
             {data.kontekst.volonteri != undefined &&
                 data.kontekst.volonteri.map((eachVol)=>(
-                    <div key={eachVol.id} style={styles.card}>
+                    <div  className='cardVol' key={eachVol.id}>
+                    <div className="cardVolInfo">
                         <p>{eachVol.ime}</p>
                         <p>Grad: {eachVol.grad}</p>
                         <p>Kontakt: {eachVol.kontakt}</p>
-                        {eachVol.aktivnosti != undefined ? <span>Kategorije volontiranja: </span> : 
+                        </div>
+                        <div cardVolAkt>
+                        {eachVol.aktivnosti != "" ? <span>Kategorije volontiranja: </span> : 
                             <span>Nema preference za tip rada</span>} 
-                        {eachVol.aktivnosti != undefined && eachVol.aktivnosti.map((eachKat, index)=>(
+                        {eachVol.aktivnosti != "" && eachVol.aktivnosti.map((eachKat, index)=>(
                             index === 0 ? <span>{eachKat}</span>: <span>, {eachKat}</span>
-                            
                         ))}
+                          </div>
 
                         {data.kontekst.uloga === "administrator" && 
-                        <Button onClick={()=>handleBrisanje(eachVol)}>Izbrisi</Button>}
+                        <Button variant="danger" className="izbrisiVol" onClick={()=>handleBrisanje(eachVol)}>Izbrisi</Button>}
                     </div>
                 ))
             }

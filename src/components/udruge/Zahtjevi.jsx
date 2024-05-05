@@ -46,14 +46,15 @@ function Zahtjevi() {
       <h3>Zahtjevi za odobravanje</h3>
       {kontekst.zahtjevi.length > 0 ? (
         kontekst.zahtjevi.map((eachZahtjev) => (
-          <div key={eachZahtjev.id} style={styles.card}>
-            <div>
+          <div key={eachZahtjev.id} className="cardUdrgaContainer">
+            <div className="cardUdruga">
               <h3>{eachZahtjev.naziv}</h3>
               <p>Grad: {eachZahtjev.grad}</p>
               <p>Adresa: {eachZahtjev.adresa}</p>
+            <Button variant="dark" onClick={() => handlePotvrdu(eachZahtjev)}>Potvrdi</Button>
+            <Button variant="danger" onClick={() => handleBrisanje(eachZahtjev)}>Izbrisi</Button>
             </div>
-            <Button onClick={() => handlePotvrdu(eachZahtjev)}>Potvrdi</Button>
-            <Button onClick={() => handleBrisanje(eachZahtjev)}>Izbrisi</Button>
+
           </div>
         ))
       ) : (

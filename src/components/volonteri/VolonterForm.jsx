@@ -62,8 +62,8 @@ function VolonterForm({ onClose }) {
 
   return (
     <form>
-      <div>
-        <label>
+      <div className="addVol">
+        <label className="addVolLabel">
           Ime i prezime:
           <input
             type="text"
@@ -74,7 +74,7 @@ function VolonterForm({ onClose }) {
             required
           />
         </label>
-        <label>
+        <label className="addVolLabel">
           Kontakt:
           <input
             type="text"
@@ -84,7 +84,7 @@ function VolonterForm({ onClose }) {
             className="addInput"
           />
         </label>
-        <label>
+        <label className="addVolLabel">
           Grad:
           <select
             type="text"
@@ -104,7 +104,7 @@ function VolonterForm({ onClose }) {
         <label>
           Kategorije volontiranja:
           {aktivnosti.map((akt) => (
-            <label key={akt}>
+            <label key={akt} className="filterKategorije">
               <input
                 type="checkbox"
                 name="aktivnosti"
@@ -117,6 +117,7 @@ function VolonterForm({ onClose }) {
           ))}
         </label>
         <Button
+          variant="dark"
           disabled={isButtonDisabled}
           style={
             isButtonDisabled

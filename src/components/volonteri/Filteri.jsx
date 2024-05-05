@@ -73,9 +73,9 @@ function Filteri() {
   }
 
   return (
-    <div>
+    <div className="filteri">
       <h3>Filter:</h3>
-      <form>
+      <form className="filteriForm">
         <label>
           Grad:
           <select
@@ -96,7 +96,7 @@ function Filteri() {
         <label>
           Kategorije volontiranja:
           {aktivnosti.map((akt) => (
-            <label key={akt}>
+            <label key={akt} className="filterKategorije">
               <input
                 type="checkbox"
                 name="aktivnosti"
@@ -111,7 +111,7 @@ function Filteri() {
       </form>
       {isVisible === true && <AddVolonter onClose={() => closeModal()} />}
 
-      <Button onClick={showModal}>Novi Volonter</Button>
+      <Button variant="dark" onClick={showModal}>Novi Volonter</Button>
     </div>
   );
 }
