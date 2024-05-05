@@ -47,9 +47,9 @@ function AddForm({onClose}){
     }
 
     return(
-      <form>
+      <form className="prijavaAkt">
         <div>
-          <label>
+          <label className="prijavaAktLabel">
             Naziv:
             <input
                 type='text'
@@ -60,7 +60,7 @@ function AddForm({onClose}){
                 required
             />
           </label>
-          <label>Datum:</label>
+          <label className="prijavaAktLabel">Datum:
       <input
         type="date"
         id={"date"}
@@ -68,7 +68,8 @@ function AddForm({onClose}){
         value={aktivnost.datum}
         onChange={(e)=>handleInputChange(e)}
           />
-          <label>
+          </label>
+          <label className="prijavaAktLabel">
           Lokacija:
           <select
             type="text"
@@ -84,7 +85,7 @@ function AddForm({onClose}){
               </option>
             ))}
           </select>
-        </label><label>
+        </label><label className="prijavaAktLabel">
             Udruga:
             <input
                 type='text'
@@ -94,7 +95,7 @@ function AddForm({onClose}){
                 className="addInput"
                 required
             />
-          </label><label>
+          </label><label className="prijavaAktLabel">
             Opis:
             <input
                 type='text'
@@ -107,7 +108,9 @@ function AddForm({onClose}){
           </label>
           
         </div>
-        <Button onClick={handleClick}>Stvori</Button>
+        <div className="prijavaAktButtonContainer">
+        <Button variant='dark' onClick={handleClick}>Stvori</Button>
+        </div>
 
       </form>
     );

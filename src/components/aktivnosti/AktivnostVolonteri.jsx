@@ -39,7 +39,7 @@ function AktivnostVolonteri(){
                   <div key={vol.id} className="aktVol">
                     <li key={vol.ime}>{vol.ime} {vol.prezime}</li>
                     { data.kontekst.uloga==="administrator" && 
-                        <Button onClick={()=>handleBrisanjeVolontera(info, vol)}>Izbrisi</Button>}
+                        <Button variant="danger" onClick={()=>handleBrisanjeVolontera(info, vol)}>Izbrisi</Button>}
                   </div>
                 ))}
             </ol>
