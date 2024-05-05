@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-import StvoriZahtjev from "./StvoriZahtjev";
-
+import {StvoriZahtjev} from "./StvoriZahtjev";
+import UdrugaForm from "./UdrugaForm";
 function StvoriZahtjevBtn(){
-    const [isClicked, setClicked] = useState(false)
+    const [isClicked, setClicked] = useState(false);
 
     function handleClick(){
         setClicked(true);
+        console.log("setClicked:", isClicked);
     }
 
     function handleClose(){
@@ -15,8 +16,8 @@ function StvoriZahtjevBtn(){
 
     return(
         <div>
-        <Button onClick={handleClick}>Prijavi udrugu</Button>
-        {isClicked && <StvoriZahtjev onClose={handleClose}/>}
+        <Button onClick={()=>handleClick()}>Prijavi udrugu</Button>
+         {isClicked && <StvoriZahtjev onClose={handleClose}/>}
         </div>
     );
 }

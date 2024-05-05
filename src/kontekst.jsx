@@ -4,7 +4,8 @@ const AppContext = createContext({
     uloga: "korisnik",
     aktivnosti: [],
     volonteri: [], 
-    udruge: []
+    udruge: [],
+    fresh: true
 });
 
 export default AppContext;
