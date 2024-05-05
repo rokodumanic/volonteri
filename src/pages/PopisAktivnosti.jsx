@@ -18,14 +18,21 @@ function PopisAktivnosti(){
 
     async function getAktivnosti(){      
           await axios.get('http://localhost:3001/aktivnosti')
-        .then(response => {
-          console.log("getAktivnosti",response.data);
-          return response.data;})
-        .then((res)=>{data.setKontekst( {...data.kontekst , aktivnosti: res});
-        console.log("AKT:", res, "\n", "data:", data.kontekst.aktivnostic);})
+        .then((res)=>{data.setKontekst( {...data.kontekst , aktivnosti: res.data});
+        console.log("AKT:", res.data, "\n", "data:", data.kontekst.aktivnostic);})
         .catch(error => {
           console.error('There was a problem with the GET request:', error);
         });
+      }
+
+      async function handleBrisanje(obj) {
+        await axios
+          .delete(`http://localhost:3001/aktivnosti/${obj.id}`)
+          .then((res) => {
+            console.log("Res brisanje:", res.data);
+          })
+          .then(async() => await getAktivnosti())
+          .catch((err) => console.log("Error:", err));
       }
 
     function handleClick(aktivnost){
@@ -58,10 +65,14 @@ function PopisAktivnosti(){
           />
          : null}
     {data.kontekst.aktivnosti.map((aktivnost)=>( 
-        <div style={styles.card} onClick={()=>handleClick(aktivnost)}>
+        <div style={styles.card}>
+            <div onClick={()=>handleClick(aktivnost)}>
             <h2>{aktivnost.naziv}</h2>
             <p>Datum: {aktivnost.datum}</p>
             <p>Grad: {aktivnost.lokacija}</p>
+            </div>
+            {data.kontekst.uloga==="administrator" && 
+              <Button onClick={()=>handleBrisanje(aktivnost)}>Izbrisi aktivnost</Button>}
         </div>))}
         <Button onClick={handleAdd}>+</Button>
         </>)
