@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useContext, useEffect } from "react";
 import AppContext from "../../kontekst";
+import { Button } from "react-bootstrap";
 
 function GalerijaVolontera(){
     const data = useContext(AppContext);
@@ -15,10 +16,20 @@ function GalerijaVolontera(){
               await axios.get('http://localhost:3001/volonteri')
             .then(res => {
               console.log("getAktivnosti",res.data);
-              data.setKontekst( {...data.kontekst , volonteri: [...res.data]})})
+              data.setKontekst( {...data.kontekst , volonteri: res.data})})
             .catch(error => {
               console.error('There was a problem with the GET request:', error);
             });
+          }
+
+          async function handleBrisanje(obj) {
+            await axios
+              .delete(`http://localhost:3001/volonteri/${obj.id}`)
+              .then((res) => {
+                console.log("Res brisanje:", res.data);
+              })
+              .then(async() => await getVolonteri())
+              .catch((err) => console.log("Error:", err));
           }
 
     return(
@@ -35,6 +46,9 @@ function GalerijaVolontera(){
                             index === 0 ? <span>{eachKat}</span>: <span>, {eachKat}</span>
                             
                         ))}
+
+                        {data.kontekst.uloga === "administrator" && 
+                        <Button onClick={()=>handleBrisanje(eachVol)}>Izbrisi</Button>}
                     </div>
                 ))
             }
