@@ -17,7 +17,7 @@ function AddAktivnost({onClose}){
           </Modal.Header>
   
           <Modal.Body>
-              <AddForm />
+              <AddForm onClose={onClose}/>
           </Modal.Body>
   
         </Modal>

@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import AppContext from '../../kontekst';
 import ModalPrijava from './ModalPrijava';
 import AktivnostVolonteri from './AktivnostVolonteri';
+import GMaps from './GMaps';
 
 function AktivnostInfo({onClose}){
     const data = useContext(AppContext);
@@ -20,6 +21,7 @@ function AktivnostInfo({onClose}){
   
           <Modal.Body>
               <ModalInfo  />
+              <GMaps grad={info.lokacija}/>
               <ModalPrijava />
               {info.volonteri != undefined && <AktivnostVolonteri />}
           </Modal.Body>
