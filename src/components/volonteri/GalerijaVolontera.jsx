@@ -7,7 +7,7 @@ function GalerijaVolontera(){
     const data = useContext(AppContext);
 
         useEffect(()=>{
-            if(!data.kontekst.fresh) {getVolonteri()}
+            if(!data.kontekst.fresh) { getVolonteri()}
         },[data.kontekst.fresh])
     
         async function getVolonteri(){ 

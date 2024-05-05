@@ -16,7 +16,6 @@ function UdrugaForm({ onClose }) {
     "Vukovar",
     "Zagreb",
   ];
-  const aktivnosti = ["Ekologija", "Edukacija", "Prijevoz", "Razno"];
   const [udruga, setUdruga] = useState({
     naziv: "",
     adresa: "",

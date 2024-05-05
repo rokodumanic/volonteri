@@ -7,18 +7,7 @@
       "udruga": null,
       "opis": "Pomazemo jedni drugima.",
       "id": "1",
-      "volonteri": [
-        {
-          "ime": "Ante",
-          "prezime": "Dobrila",
-          "id": "Hpr7o3rc2"
-        },
-        {
-          "ime": "Roko",
-          "prezime": "Dumanic",
-          "id": "RBJUoz_NvHpr7o3rc2elw"
-        }
-      ]
+      "volonteri": []
     },
     {
       "id": "u4hPHs_aoCGKycmJ1H8JP",
@@ -66,6 +55,16 @@
       "kontakt": "vwsvdw",
       "grad": "Karlovac",
       "aktivnosti": []
+    },
+    {
+      "id": "5a6a",
+      "ime": ",as c",
+      "kontakt": "a s ca",
+      "grad": "Split",
+      "aktivnosti": [
+        "Edukacija",
+        "Prijevoz"
+      ]
     }
   ],
   "udruge": [],
